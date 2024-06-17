@@ -36,6 +36,7 @@ fileOps();
 //    console.log(data.toString())
 // })
 
+
 // console.log('hello world')
 
 // // write file
@@ -60,6 +61,11 @@ fileOps();
 
 
 // catch erro
+
+process.on('uncaughtException',err => {
+    console.log('Ther was ab uncaught error:$(err)');
+    process.exit(1);
+})
 
 process.on('uncaughtException',err => {
     console.log('Ther was ab uncaught error:$(err)');
